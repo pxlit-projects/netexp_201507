@@ -16,7 +16,6 @@ Een app die ouders helpt om een basisschool te kiezen in Gent.
   - Ratings van de scholen bijhouden
   - UWP applicatie (met Xamarin)
   - WPF applicatie
-  - test
 
 ### JSON Bron
 
