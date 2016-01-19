@@ -9,6 +9,6 @@ namespace TEST_VERKEERSBORDEN.Models
 {
     public class VerkeersbordContext : DbContext
     {
-        public DbSet<Verkeersbord>   Datums    { get; set; }
+        public DbSet<Verkeersbord>   Verkeersborden { get; set; }
     }
 }

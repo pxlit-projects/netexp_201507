@@ -13,7 +13,6 @@ namespace TEST_VERKEERSBORDEN.Controllers
 {
     public class VerkeersbordController : ApiController
     {
-        List<Verkeersbord> data;
         // GET: api/Verkeersbord
         public List<Verkeersbord> Get()
         {
@@ -31,17 +30,22 @@ namespace TEST_VERKEERSBORDEN.Controllers
 
             JSONArray = JSONArray.Remove(JSONArray.Length - 1);
 
-            data = JsonConvert.DeserializeObject<List<Verkeersbord>>(JSONArray);
+            List<Verkeersbord> data = JsonConvert.DeserializeObject<List<Verkeersbord>>(JSONArray);
 
-            UpdateDatabase();
+            UpdateDatabase(data);
 
             return data;
         }
 
         // GET: api/Verkeersbord/5
-        public string Get(int id)
+        public Verkeersbord Get(int objectid)
         {
-            return "value";
+            Verkeersbord verkeersbord;
+            using (var context = new VerkeersbordContext())
+            {
+                verkeersbord = context.Verkeersborden.Find(objectid);
+            }
+            return verkeersbord;
         }
 
         // POST: api/Verkeersbord
@@ -59,13 +63,40 @@ namespace TEST_VERKEERSBORDEN.Controllers
         {
         }
 
-        public void UpdateDatabase()
+        public void UpdateDatabase(List<Verkeersbord> data)
         {
             using ( var context = new VerkeersbordContext() ) 
             {
                 foreach (Verkeersbord verkeersbord in data)
                 {
-                    context.Datums.Add(verkeersbord);
+                    if (context.Verkeersborden.Any(o => o.objectid == verkeersbord.objectid))
+                    {
+                        //Found     => Update
+                        var updateBord = context.Verkeersborden.FirstOrDefault(v => v.objectid == verkeersbord.objectid);
+                        updateBord.objectid = verkeersbord.objectid;
+                        updateBord.point_lat = verkeersbord.point_lat;
+                        updateBord.point_lng = verkeersbord.point_lng;
+                        updateBord.xkey = verkeersbord.xkey;
+                        updateBord.vrije_hoogte = verkeersbord.vrije_hoogte;
+                        updateBord.ophanging = verkeersbord.ophanging;
+                        updateBord.type = verkeersbord.type;
+                        updateBord.vorm = verkeersbord.vorm;
+                        updateBord.afmeting1 = verkeersbord.afmeting1;
+                        updateBord.afmeting2 = verkeersbord.afmeting2;
+                        updateBord.opschrift = verkeersbord.opschrift;
+                        updateBord.fabtype = verkeersbord.fabtype;
+                        updateBord.beeldvlak = verkeersbord.beeldvlak;
+                        updateBord.fabdatum = verkeersbord.fabdatum;
+                        updateBord.subkey = verkeersbord.subkey;
+                        updateBord.x = verkeersbord.x;
+                        updateBord.y = verkeersbord.y;
+                        updateBord.shape = verkeersbord.shape;
+                    }
+                    else
+                    {
+                        //not Found => Insert
+                        context.Verkeersborden.Add(verkeersbord);
+                    }
                     context.SaveChanges();
                 }
             }
