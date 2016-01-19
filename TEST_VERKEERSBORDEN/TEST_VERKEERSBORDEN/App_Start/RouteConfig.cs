@@ -13,6 +13,12 @@ namespace TEST_VERKEERSBORDEN
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            /*routes.MapRoute(
+                "Add",                                                // Route name
+                "Verkeersbord",                                       // URL with parameters
+                new { controller = "Verkeersbord", action = "Post" }  // Parameter defaults
+            );*/
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
