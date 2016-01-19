@@ -1,5 +1,5 @@
 # netexp_201507
-# Project: App: Basisscholen in Gent
+# Project: App: Verkeersborden in Antwerpen
 
 ### Doelstelling
 
