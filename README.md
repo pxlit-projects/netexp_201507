@@ -3,21 +3,21 @@
 
 ### Doelstelling
 
-Een app die ouders helpt om een basisschool te kiezen in Gent.
+Een app die het aantal verkeersborden in beeld brengt, en alzo een eventuele "wildgroei" van verkeersborden aangeeft.
 
 ### Functionele requirements
-  - Lijst afbeelden van alle scholen, waarop doorgeklikt kan worden naar een detail
-  - Een detail per school afbeelden
-  - Afstand van huidige locatie tot de school berekenen in vogelvlucht en weergeven in het detail
-  - Rating geven aan de school + gemiddelde rating afbeelden.
+  - Lijst afbeelden van alle verkeersborden, waarop doorgeklikt kan worden naar een detail (eigenschappen zoals vorm ed)
+  - Kaart afbeelden
+  - Gebruiker kan een nieuw verkeersbord uploaden (app gebruikt huidige locatie als locatie van het bord)
+  - Gebruiker- en overheidssaangegeven borden worden verschillend weergegeven 
 
 ### Technische requirements
   - Een (zelf te schrijven) WebApi (op Azure) communiceert (via JSON) met de open data site en schrijft deze objecten weg in een     database. Op deze manier blijft de data beschikbaar indien de open data site offline is. De apps halen hun data op via JSON      bij de WebApi.
-  - Ratings van de scholen bijhouden
+  - Nieuwe door gebruikers toegevoegde verkeersborden bijhouden
   - UWP applicatie (met Xamarin)
   - WPF applicatie
 
 ### JSON Bron
 
-http://datatank.stad.gent/4/onderwijsopvoeding/basisscholen.json
+http://datasets.antwerpen.be/v4/gis/verkeersbordpt.json
 
