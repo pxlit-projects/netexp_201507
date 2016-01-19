@@ -7,11 +7,13 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Script.Serialization;
+using TEST_VERKEERSBORDEN.Models;
 
 namespace TEST_VERKEERSBORDEN.Controllers
 {
     public class VerkeersbordController : ApiController
     {
+        List<Verkeersbord> data;
         // GET: api/Verkeersbord
         public List<Verkeersbord> Get()
         {
@@ -29,8 +31,10 @@ namespace TEST_VERKEERSBORDEN.Controllers
 
             JSONArray = JSONArray.Remove(JSONArray.Length - 1);
 
-          
-            List<Verkeersbord> data = JsonConvert.DeserializeObject<List<Verkeersbord>>(JSONArray);
+            data = JsonConvert.DeserializeObject<List<Verkeersbord>>(JSONArray);
+
+            UpdateDatabase();
+
             return data;
         }
 
@@ -53,6 +57,18 @@ namespace TEST_VERKEERSBORDEN.Controllers
         // DELETE: api/Verkeersbord/5
         public void Delete(int id)
         {
+        }
+
+        public void UpdateDatabase()
+        {
+            using ( var context = new VerkeersbordContext() ) 
+            {
+                foreach (Verkeersbord verkeersbord in data)
+                {
+                    context.Datums.Add(verkeersbord);
+                    context.SaveChanges();
+                }
+            }
         }
     }
 }

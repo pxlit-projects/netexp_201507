@@ -10,7 +10,5 @@ namespace TEST_VERKEERSBORDEN.Models
     public class VerkeersbordContext : DbContext
     {
         public DbSet<Verkeersbord>   Datums    { get; set; }
-        //public DbSet<Example> Examples  { get; set; }
-        //public DbSet<Paging>  Pages     { get; set; }
     }
 }
