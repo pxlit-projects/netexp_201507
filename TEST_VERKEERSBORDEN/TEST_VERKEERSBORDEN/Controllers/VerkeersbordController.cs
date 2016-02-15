@@ -12,6 +12,7 @@ using TEST_VERKEERSBORDEN.Models;
 
 namespace TEST_VERKEERSBORDEN.Controllers
 {
+
     public class VerkeersbordController : ApiController
     {
         // GET: api/Verkeersbord
@@ -36,6 +37,7 @@ namespace TEST_VERKEERSBORDEN.Controllers
 
         // POST: api/Verkeersbord
         [HttpPost]
+        [Authorize(Users="AppUser")]
         public void Post([FromBody]string value)
         {
 
@@ -47,9 +49,10 @@ namespace TEST_VERKEERSBORDEN.Controllers
         }
 
         // DELETE: api/Verkeersbord/5
+        /*
         public void Delete(int id)
         {
-        }
+        }*/
 
         public string PrepareJSONString (string untrimmedJSON)
         {
