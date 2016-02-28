@@ -1,9 +1,0 @@
-D:\ProjectsNETExpert\TEST_VERKEERSBORDEN\Business_objects\bin\Debug\Business_objects.dll
-D:\ProjectsNETExpert\TEST_VERKEERSBORDEN\Business_objects\bin\Debug\Business_objects.pdb
-D:\ProjectsNETExpert\TEST_VERKEERSBORDEN\Business_objects\obj\Debug\Business_objects.csprojResolveAssemblyReference.cache
-D:\ProjectsNETExpert\TEST_VERKEERSBORDEN\Business_objects\obj\Debug\Business_objects.dll
-D:\ProjectsNETExpert\TEST_VERKEERSBORDEN\Business_objects\obj\Debug\Business_objects.pdb
-D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\Business_objects\bin\Debug\Business_objects.dll
-D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\Business_objects\bin\Debug\Business_objects.pdb
-D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\Business_objects\obj\Debug\Business_objects.dll
-D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\Business_objects\obj\Debug\Business_objects.pdb
