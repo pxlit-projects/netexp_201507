@@ -128,3 +128,8 @@ D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\TEST_VERKEERSBORD
 D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\TEST_VERKEERSBORDEN\obj\Debug\TEST_VERKEERSBORDEN.csprojResolveAssemblyReference.cache
 D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\TEST_VERKEERSBORDEN\obj\Debug\TEST_VERKEERSBORDEN.dll
 D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\TEST_VERKEERSBORDEN\obj\Debug\TEST_VERKEERSBORDEN.pdb
+D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\TEST_VERKEERSBORDEN\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\TEST_VERKEERSBORDEN\bin\Swashbuckle.Core.dll
+D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\TEST_VERKEERSBORDEN\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\TEST_VERKEERSBORDEN\bin\WebActivatorEx.dll
+D:\Git_hub_rep\netexp_201507\netexp_201507\TEST_VERKEERSBORDEN\TEST_VERKEERSBORDEN\bin\System.IdentityModel.Tokens.Jwt.xml
