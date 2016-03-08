@@ -272,7 +272,6 @@
     <Content Include="Metadata\deploymentTemplates\apiappconfig.azureresource.json" />
     <Content Include="apiapp.json" />
     <None Include="Properties\PublishProfiles\ANTWERPSEVERKEERSBORDEN%28Resource_group1%29.pubxml" />
-    <None Include="Properties\PublishProfiles\Antwerpseverkeersborden.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -16,14 +16,12 @@ namespace TEST_VERKEERSBORDEN.Controllers
     public class VerkeersbordController : ApiController
     {
         // GET: api/Verkeersbord
-        public void Get()
+        public List<Verkeersbord> Get()
         {
-            /*using (var context = new VerkeersbordContext())
+            using (var context = new VerkeersbordContext())
             {
                 return context.Verkeersborden.ToList();
-            }*/
-
-            RetrieveOpenDataAndUpdateDatabase();
+            }
         }
 
         // GET: api/Verkeersbord/5

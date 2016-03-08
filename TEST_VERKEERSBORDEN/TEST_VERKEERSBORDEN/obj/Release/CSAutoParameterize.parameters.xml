@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-TEST_VERKEERSBORDEN-20160119094924.mdf;Initial Catalog=aspnet-TEST_VERKEERSBORDEN-20160119094924;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\Git_hub_rep\\netexp_201507\\netexp_201507\\TEST_VERKEERSBORDEN\\TEST_VERKEERSBORDEN\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-  <parameter name="TEST_VERKEERSBORDEN.Models.VerkeersbordContext-Web.config Connection String" description="TEST_VERKEERSBORDEN.Models.VerkeersbordContext Connection String used in web.config by the application to access the database." defaultValue="TEST_VERKEERSBORDEN.Models.VerkeersbordContext_ConnectionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="D:\\Git_hub_rep\\netexp_201507\\netexp_201507\\TEST_VERKEERSBORDEN\\TEST_VERKEERSBORDEN\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TEST_VERKEERSBORDEN.Models.VerkeersbordContext']/@connectionString" />
-  </parameter>
-</parameters>
