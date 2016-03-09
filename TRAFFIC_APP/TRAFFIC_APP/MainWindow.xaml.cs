@@ -53,5 +53,10 @@ namespace TRAFFIC_APP
                 Verkeersbord verkeersbord = JsonConvert.DeserializeObject<Verkeersbord>(json);
             }
         }
+
+        private void AllSigns_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            GetSignleSign(10);
+        }
     }
 }

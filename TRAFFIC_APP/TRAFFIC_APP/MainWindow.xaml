@@ -22,7 +22,7 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel>
-                <ListBox x:Name="AllSigns" Height="250">
+                <ListBox x:Name="AllSigns" DisplayMemberPath="id" Height="250" MouseDoubleClick="AllSigns_MouseDoubleClick">
                 </ListBox>
             </StackPanel>
             <StackPanel  Orientation="Horizontal" Height="60">
@@ -30,7 +30,7 @@
                     Add Traffic Sign
                 </Button>
             </StackPanel>
-            <StackPanel >
+            <StackPanel>
                 <!--messages databinding here-->
             </StackPanel>
         </StackPanel>
