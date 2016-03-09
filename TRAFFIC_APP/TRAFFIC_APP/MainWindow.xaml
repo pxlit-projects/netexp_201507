@@ -22,8 +22,7 @@
                 </StackPanel>
             </StackPanel>
             <StackPanel>
-                <ListBox Height="250">
-                    <!--insert databinding from api call-->
+                <ListBox x:Name="AllSigns" Height="250">
                 </ListBox>
             </StackPanel>
             <StackPanel  Orientation="Horizontal" Height="60">

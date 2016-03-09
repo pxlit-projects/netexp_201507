@@ -23,3 +23,7 @@ D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\obj\Debug\TRA
 D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\obj\Debug\TRAFFIC_APP.g.resources
 D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\obj\Debug\TRAFFIC_APP.Properties.Resources.resources
 D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\obj\Debug\TRAFFIC_APP.csproj.GenerateResource.Cache
+D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\bin\Debug\Business_objects.dll
+D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\bin\Debug\Business_objects.pdb
+D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\bin\Debug\Newtonsoft.Json.dll
+D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\bin\Debug\Newtonsoft.Json.xml

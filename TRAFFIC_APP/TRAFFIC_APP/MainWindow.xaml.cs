@@ -1,7 +1,10 @@
 ﻿using Business_objects;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,16 +24,34 @@ namespace TRAFFIC_APP
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string detail_URL = "http://antwerpseverkeersborden.azurewebsites.net/api/verkeersbords/";
+        private string all_URL = "http://antwerpseverkeersborden.azurewebsites.net/api/verkeersbords/"; 
+
         public MainWindow()
         {
             InitializeComponent();
-            LoadSigns();
+            List<Verkeersbord> verkeersborden = LoadSigns();
+            AllSigns.ItemsSource = verkeersborden;
         }
 
-        private void LoadSigns()
+        private List<Verkeersbord> LoadSigns()
         {
-            Verkeersbord verkeersbord = new Verkeersbord();
-            //go to api and get everything
+            using (var webClient = new System.Net.WebClient())
+            {
+                var json = webClient.DownloadString(all_URL);
+                List<Verkeersbord> verkeersborden = JsonConvert.DeserializeObject<List<Verkeersbord>>(json);
+                return verkeersborden;
+            }
+        }
+
+        private void GetSignleSign(int id)
+        {
+            string complete_URL = detail_URL + id;
+            using (var webClient = new WebClient())
+            {
+                var json = webClient.DownloadString(complete_URL);
+                Verkeersbord verkeersbord = JsonConvert.DeserializeObject<Verkeersbord>(json);
+            }
         }
     }
 }
