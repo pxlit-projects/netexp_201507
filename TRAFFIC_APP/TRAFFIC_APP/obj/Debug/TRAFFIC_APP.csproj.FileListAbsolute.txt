@@ -34,4 +34,3 @@ D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\obj\Debug\TRA
 D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\obj\Debug\TRAFFIC_APP_MarkupCompile.lref
 D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\obj\Debug\App.baml
-D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\obj\Debug\TRAFFIC_APP.csprojResolveAssemblyReference.cache

@@ -30,7 +30,10 @@ namespace TRAFFIC_APP
         public MainWindow()
         {
             InitializeComponent();
-            verkeersborden = LoadSigns();
+            if (verkeersborden == null)
+            {
+                verkeersborden = LoadSigns();
+            }
             AllSigns.ItemsSource = verkeersborden;
         }
 
@@ -62,20 +65,25 @@ namespace TRAFFIC_APP
         //handle double click filter
         private void Button_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            string searchString = FilterBox.Text;
-            if (TypeCheck.IsChecked == true) {
-                List<Verkeersbord> filteredList = verkeersborden.FindAll(delegate(Verkeersbord obj) { return obj.type == searchString; });
-                AllSigns.ItemsSource = filteredList;
-            }
-            else if (VormCheck.IsChecked == true)
+            if ( FilterBox.Text != null ) 
             {
-                List<Verkeersbord> filteredList = verkeersborden.FindAll(delegate(Verkeersbord obj) { return obj.vorm == searchString; });
-                AllSigns.ItemsSource = filteredList;
+                string searchString = FilterBox.Text;
+                if (TypeCheck.IsChecked == true)
+                {
+                    List<Verkeersbord> filteredList = verkeersborden.FindAll(delegate(Verkeersbord obj) { return obj.type == searchString; });
+                    AllSigns.ItemsSource = filteredList;
+                }
+                else
+                {
+                    List<Verkeersbord> filteredList = verkeersborden.FindAll(delegate(Verkeersbord obj) { return obj.vorm == searchString; });
+                    AllSigns.ItemsSource = filteredList;
+                }
             }
             else
             {
-                //do nothing
+                AllSigns.ItemsSource = verkeersborden;
             }
+
         }
 
     }
