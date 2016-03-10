@@ -1,0 +1,74 @@
+﻿<Window x:Class="TRAFFIC_APP.DetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="DetailWindow" Height="500" Width="300"
+        Closing="Window_Closing">
+    <Grid x:Name="DetailGrid" RenderTransformOrigin="0.37,0.506">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="EIGENSCHAP"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="WAARDE"/>        
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Id"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Path=id}"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Object Id"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Path=objectid}"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="afmeting 1"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Path=afmeting1}" />
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="afmeting 2"/>
+        <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding Path=afmeting2}" />
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="beeldvlak"/>
+        <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding Path=beeldvlak}" />
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Fabricage datum"/>
+        <TextBlock Grid.Row="6" Grid.Column="1" Text="{Binding Path=fabdatum}"/>
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="Fabricage Type"/>
+        <TextBlock Grid.Row="7" Grid.Column="1" Text="{Binding Path=fabtype}"/>
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="Ophanging"/>
+        <TextBlock Grid.Row="8" Grid.Column="1" Text="{Binding Path=ophanging}"/>
+        <TextBlock Grid.Row="9" Grid.Column="0" Text="opschrift"/>
+        <TextBlock Grid.Row="9" Grid.Column="1" Text="{Binding Path=opschrift}"/>
+        <TextBlock Grid.Row="10" Grid.Column="0" Text="Lengtegraad"/>
+        <TextBlock Grid.Row="10" Grid.Column="1" Text="{Binding Path=point_lng}"/>
+        <TextBlock Grid.Row="11" Grid.Column="0" Text="Breedtegraad"/>
+        <TextBlock Grid.Row="11" Grid.Column="1" Text="{Binding Path=point_lat}"/>
+        <TextBlock Grid.Row="12" Grid.Column="0" Text="Shape"/>
+        <TextBlock Grid.Row="12" Grid.Column="1" Text="{Binding Path=shape}"/>
+        <TextBlock Grid.Row="13" Grid.Column="0" Text="Subkey" />
+        <TextBlock Grid.Row="13" Grid.Column="1" Text="{Binding Path=subkey}" />
+        <TextBlock Grid.Row="14" Grid.Column="0" Text="type" />
+        <TextBlock Grid.Row="14" Grid.Column="1" Text="{Binding Path=type}" />
+        <TextBlock Grid.Row="15" Grid.Column="0" Text="vorm" />
+        <TextBlock Grid.Row="15" Grid.Column="1" Text="{Binding Path=vorm}" />
+        <TextBlock Grid.Row="16" Grid.Column="0" Text="Vrije hoogte:" />
+        <TextBlock Grid.Row="16" Grid.Column="1" Text="{Binding Path=vrije_hoogte}" />
+        <TextBlock Grid.Row="17" Grid.Column="0" Text="x" />
+        <TextBlock Grid.Row="17" Grid.Column="1" Text="{Binding Path=x}" />
+        <TextBlock Grid.Row="18" Grid.Column="0" Text="xkey" />
+        <TextBlock Grid.Row="18" Grid.Column="1" Text="{Binding Path=xkey}" />
+        <TextBlock Grid.Row="19" Grid.Column="0" Text="y" />
+        <TextBlock Grid.Row="19" Grid.Column="1" Text="{Binding Path=y}" />
+    </Grid>
+</Window>

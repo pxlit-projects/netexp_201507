@@ -24,13 +24,13 @@ namespace TRAFFIC_APP
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string detail_URL = "http://antwerpseverkeersborden.azurewebsites.net/api/verkeersbords/";
-        private string all_URL = "http://antwerpseverkeersborden.azurewebsites.net/api/verkeersbords/"; 
+        private string base_URL = "http://antwerpseverkeersborden.azurewebsites.net/api/verkeersbords/";
+        public List<Verkeersbord> verkeersborden;
 
         public MainWindow()
         {
             InitializeComponent();
-            List<Verkeersbord> verkeersborden = LoadSigns();
+            verkeersborden = LoadSigns();
             AllSigns.ItemsSource = verkeersborden;
         }
 
@@ -38,25 +38,45 @@ namespace TRAFFIC_APP
         {
             using (var webClient = new System.Net.WebClient())
             {
-                var json = webClient.DownloadString(all_URL);
+                var json = webClient.DownloadString(base_URL);
                 List<Verkeersbord> verkeersborden = JsonConvert.DeserializeObject<List<Verkeersbord>>(json);
                 return verkeersborden;
             }
         }
 
-        private void GetSignleSign(int id)
+        private void AllSigns_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            string complete_URL = detail_URL + id;
-            using (var webClient = new WebClient())
+            var item = AllSigns.SelectedItem as Verkeersbord;
+            DetailWindow detailWindow = new DetailWindow(item.id);
+            detailWindow.Show();
+            this.Close();
+        }
+
+        //handle double click add button
+        private void Button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            AddWindow addWindow = new AddWindow();
+            addWindow.Show();
+        }
+
+        //handle double click filter
+        private void Button_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            string searchString = FilterBox.Text;
+            if (TypeCheck.IsChecked == true) {
+                List<Verkeersbord> filteredList = verkeersborden.FindAll(delegate(Verkeersbord obj) { return obj.type == searchString; });
+                AllSigns.ItemsSource = filteredList;
+            }
+            else if (VormCheck.IsChecked == true)
             {
-                var json = webClient.DownloadString(complete_URL);
-                Verkeersbord verkeersbord = JsonConvert.DeserializeObject<Verkeersbord>(json);
+                List<Verkeersbord> filteredList = verkeersborden.FindAll(delegate(Verkeersbord obj) { return obj.vorm == searchString; });
+                AllSigns.ItemsSource = filteredList;
+            }
+            else
+            {
+                //do nothing
             }
         }
 
-        private void AllSigns_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            GetSignleSign(10);
-        }
     }
 }

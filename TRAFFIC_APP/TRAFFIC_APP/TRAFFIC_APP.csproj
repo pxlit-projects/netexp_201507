@@ -14,6 +14,21 @@
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Images\A_logo.ico</ApplicationIcon>
+    <ApplicationIcon>A_logo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>
@@ -72,13 +87,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DetailWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AddWindow.xaml.cs">
+      <DependentUpon>AddWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Converter\ImageConverter.cs" />
+    <Compile Include="DetailWindow.xaml.cs">
+      <DependentUpon>DetailWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -118,6 +148,291 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\A_logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\7A19H.png" />
+    <Resource Include="Images\A11.png" />
+    <Resource Include="Images\A13.png" />
+    <Resource Include="Images\A14.png" />
+    <Resource Include="Images\A15.png" />
+    <Resource Include="Images\A17.png" />
+    <Resource Include="Images\A19.png" />
+    <Resource Include="Images\A1A.png" />
+    <Resource Include="Images\A1B.png" />
+    <Resource Include="Images\A1C.png" />
+    <Resource Include="Images\A1D.png" />
+    <Resource Include="Images\A21.png" />
+    <Resource Include="Images\A23.png" />
+    <Resource Include="Images\A25.png" />
+    <Resource Include="Images\A27.png" />
+    <Resource Include="Images\A29.png" />
+    <Resource Include="Images\A3.png" />
+    <Resource Include="Images\A31.png" />
+    <Resource Include="Images\A33.png" />
+    <Resource Include="Images\A35.png" />
+    <Resource Include="Images\A37.png" />
+    <Resource Include="Images\A39.png" />
+    <Resource Include="Images\A41.png" />
+    <Resource Include="Images\A43.png" />
+    <Resource Include="Images\A45.png" />
+    <Resource Include="Images\A47.png" />
+    <Resource Include="Images\A49.png" />
+    <Resource Include="Images\A5.png" />
+    <Resource Include="Images\A51.png" />
+    <Resource Include="Images\A7A.png" />
+    <Resource Include="Images\A7B.png" />
+    <Resource Include="Images\A7C.png" />
+    <Resource Include="Images\A9.png" />
+    <Resource Include="Images\B1.png" />
+    <Resource Include="Images\B11.png" />
+    <Resource Include="Images\B13.png" />
+    <Resource Include="Images\B15A.png" />
+    <Resource Include="Images\B17.png" />
+    <Resource Include="Images\B19.png" />
+    <Resource Include="Images\B21.png" />
+    <Resource Include="Images\B22.png" />
+    <Resource Include="Images\B23.png" />
+    <Resource Include="Images\B3.png" />
+    <Resource Include="Images\B5.png" />
+    <Resource Include="Images\B7.png" />
+    <Resource Include="Images\B9.png" />
+    <Resource Include="Images\betalend.png" />
+    <Resource Include="Images\betalend2.png" />
+    <Resource Include="Images\bewoners.png" />
+    <Resource Include="Images\C1.png" />
+    <Resource Include="Images\C11.png" />
+    <Resource Include="Images\C13.png" />
+    <Resource Include="Images\C15.png" />
+    <Resource Include="Images\C17.png" />
+    <Resource Include="Images\C19.png" />
+    <Resource Include="Images\C21.png" />
+    <Resource Include="Images\C22.png" />
+    <Resource Include="Images\C23.png" />
+    <Resource Include="Images\C24A.png" />
+    <Resource Include="Images\C24B.png" />
+    <Resource Include="Images\C24C.png" />
+    <Resource Include="Images\C25.png" />
+    <Resource Include="Images\C27.png" />
+    <Resource Include="Images\C29.png" />
+    <Resource Include="Images\C3.png" />
+    <Resource Include="Images\C31LEFT.png" />
+    <Resource Include="Images\C31RIGHT.png" />
+    <Resource Include="Images\C33.png" />
+    <Resource Include="Images\C35.png" />
+    <Resource Include="Images\C37.png" />
+    <Resource Include="Images\C39.png" />
+    <Resource Include="Images\C41.png" />
+    <Resource Include="Images\C43.png" />
+    <Resource Include="Images\C45.png" />
+    <Resource Include="Images\C46.png" />
+    <Resource Include="Images\C47n.png" />
+    <Resource Include="Images\C48.png" />
+    <Resource Include="Images\C49.png" />
+    <Resource Include="Images\C5.png" />
+    <Resource Include="Images\C6.png" />
+    <Resource Include="Images\C7.png" />
+    <Resource Include="Images\C9.png" />
+    <Resource Include="Images\D10.png" />
+    <Resource Include="Images\D11.png" />
+    <Resource Include="Images\D13.png" />
+    <Resource Include="Images\D1A.png" />
+    <Resource Include="Images\D1E.png" />
+    <Resource Include="Images\D3B.png" />
+    <Resource Include="Images\D4.png" />
+    <Resource Include="Images\D5.png" />
+    <Resource Include="Images\D7.png" />
+    <Resource Include="Images\D9.png" />
+    <Resource Include="Images\DISK.png" />
+    <Resource Include="Images\E1.png" />
+    <Resource Include="Images\E11.png" />
+    <Resource Include="Images\E17.png" />
+    <Resource Include="Images\E19.png" />
+    <Resource Include="Images\E3.png" />
+    <Resource Include="Images\E5.png" />
+    <Resource Include="Images\E7.png" />
+    <Resource Include="Images\E9A.png" />
+    <Resource Include="Images\E9B.png" />
+    <Resource Include="Images\E9C.png" />
+    <Resource Include="Images\E9D.png" />
+    <Resource Include="Images\E9E.png" />
+    <Resource Include="Images\E9F.png" />
+    <Resource Include="Images\E9G.png" />
+    <Resource Include="Images\E9H.png" />
+    <Resource Include="Images\E9I.png" />
+    <Resource Include="Images\elec.png" />
+    <Resource Include="Images\elec_auto.png" />
+    <Resource Include="Images\F1-oud.gif" />
+    <Resource Include="Images\F101A.png" />
+    <Resource Include="Images\F101B.png" />
+    <Resource Include="Images\F101C.png" />
+    <Resource Include="Images\F103N.png" />
+    <Resource Include="Images\F105N.png" />
+    <Resource Include="Images\F107.png" />
+    <Resource Include="Images\F109.png" />
+    <Resource Include="Images\F11.png" />
+    <Resource Include="Images\F111.png" />
+    <Resource Include="Images\F113.png" />
+    <Resource Include="Images\F117.png" />
+    <Resource Include="Images\F118.png" />
+    <Resource Include="Images\F12A.png" />
+    <Resource Include="Images\F12B.png" />
+    <Resource Include="Images\F13.png" />
+    <Resource Include="Images\F14.png" />
+    <Resource Include="Images\F15.png" />
+    <Resource Include="Images\F17.png" />
+    <Resource Include="Images\F18.png" />
+    <Resource Include="Images\F19.png" />
+    <Resource Include="Images\f1a_H.png" />
+    <Resource Include="Images\f1a_V.png" />
+    <Resource Include="Images\f1b_H.png" />
+    <Resource Include="Images\f1b_V.png" />
+    <Resource Include="Images\F21.png" />
+    <Resource Include="Images\F23A.png" />
+    <Resource Include="Images\F23B.png" />
+    <Resource Include="Images\F23C.png" />
+    <Resource Include="Images\F23D.png" />
+    <Resource Include="Images\F25.png" />
+    <Resource Include="Images\F27.png" />
+    <Resource Include="Images\F29.png" />
+    <Resource Include="Images\F31.png" />
+    <Resource Include="Images\F33A.png" />
+    <Resource Include="Images\F33AS1.png" />
+    <Resource Include="Images\F33AS2.png" />
+    <Resource Include="Images\F33AS3.png" />
+    <Resource Include="Images\F33AS4.png" />
+    <Resource Include="Images\F33AS5.png" />
+    <Resource Include="Images\F33B.png" />
+    <Resource Include="Images\F33C.png" />
+    <Resource Include="Images\F34A.png" />
+    <Resource Include="Images\F34AS10.png" />
+    <Resource Include="Images\F34AS11.png" />
+    <Resource Include="Images\F34AS12.png" />
+    <Resource Include="Images\F34AS13.png" />
+    <Resource Include="Images\F34AS14.png" />
+    <Resource Include="Images\F34AS15.png" />
+    <Resource Include="Images\F34AS16.png" />
+    <Resource Include="Images\F34AS17.png" />
+    <Resource Include="Images\F34AS18.png" />
+    <Resource Include="Images\F34AS19.png" />
+    <Resource Include="Images\F34AS20.png" />
+    <Resource Include="Images\F34AS21.png" />
+    <Resource Include="Images\F34AS36.png" />
+    <Resource Include="Images\F34B1.png" />
+    <Resource Include="Images\F34B2.png" />
+    <Resource Include="Images\F34C1.png" />
+    <Resource Include="Images\F34C2.png" />
+    <Resource Include="Images\F35.png" />
+    <Resource Include="Images\F35AS30.png" />
+    <Resource Include="Images\F35S31.png" />
+    <Resource Include="Images\F35S32.png" />
+    <Resource Include="Images\F35S33.png" />
+    <Resource Include="Images\F35S34.png" />
+    <Resource Include="Images\F35S351.png" />
+    <Resource Include="Images\F37.png" />
+    <Resource Include="Images\F39.png" />
+    <Resource Include="Images\f3a_H.png" />
+    <Resource Include="Images\f3a_V.png" />
+    <Resource Include="Images\f3b_H.png" />
+    <Resource Include="Images\f3b_V.png" />
+    <Resource Include="Images\F41.png" />
+    <Resource Include="Images\F43.png" />
+    <Resource Include="Images\F45.png" />
+    <Resource Include="Images\F45b.png" />
+    <Resource Include="Images\F47.png" />
+    <Resource Include="Images\F49.png" />
+    <Resource Include="Images\F4A.png" />
+    <Resource Include="Images\F4B.png" />
+    <Resource Include="Images\F50.png" />
+    <Resource Include="Images\F50BIS.png" />
+    <Resource Include="Images\F51A.png" />
+    <Resource Include="Images\F51B.png" />
+    <Resource Include="Images\F52-bis-L.png" />
+    <Resource Include="Images\F52-bis-R.png" />
+    <Resource Include="Images\F52L.png" />
+    <Resource Include="Images\F52R.png" />
+    <Resource Include="Images\F53.png" />
+    <Resource Include="Images\F55.png" />
+    <Resource Include="Images\F56.png" />
+    <Resource Include="Images\F57.png" />
+    <Resource Include="Images\F59.png" />
+    <Resource Include="Images\F60.png" />
+    <Resource Include="Images\F61.png" />
+    <Resource Include="Images\F62.png" />
+    <Resource Include="Images\F63a.png" />
+    <Resource Include="Images\F63b.png" />
+    <Resource Include="Images\F63c.png" />
+    <Resource Include="Images\F63d.png" />
+    <Resource Include="Images\F63e.png" />
+    <Resource Include="Images\F63f.png" />
+    <Resource Include="Images\F65.png" />
+    <Resource Include="Images\F67.png" />
+    <Resource Include="Images\F69.png" />
+    <Resource Include="Images\F7.png" />
+    <Resource Include="Images\F71.png" />
+    <Resource Include="Images\F73.png" />
+    <Resource Include="Images\F75.png" />
+    <Resource Include="Images\F77.png" />
+    <Resource Include="Images\F79.png" />
+    <Resource Include="Images\F8.png" />
+    <Resource Include="Images\F81.png" />
+    <Resource Include="Images\F83.png" />
+    <Resource Include="Images\F85.png" />
+    <Resource Include="Images\F87.png" />
+    <Resource Include="Images\F89.png" />
+    <Resource Include="Images\F9.png" />
+    <Resource Include="Images\F91.png" />
+    <Resource Include="Images\F93.png" />
+    <Resource Include="Images\F95.png" />
+    <Resource Include="Images\F97G.png" />
+    <Resource Include="Images\F98-additionnel.png" />
+    <Resource Include="Images\F98.png" />
+    <Resource Include="Images\F99A.png" />
+    <Resource Include="Images\F99B.png" />
+    <Resource Include="Images\F99C.png" />
+    <Resource Include="Images\FLE-A.png" />
+    <Resource Include="Images\FLE-B.png" />
+    <Resource Include="Images\FLE-C.png" />
+    <Resource Include="Images\FLE-D.png" />
+    <Resource Include="Images\G-ijzel.png" />
+    <Resource Include="Images\M1.png" />
+    <Resource Include="Images\M10.png" />
+    <Resource Include="Images\M2NL.png" />
+    <Resource Include="Images\M3NL.png" />
+    <Resource Include="Images\M4.png" />
+    <Resource Include="Images\M5.png" />
+    <Resource Include="Images\M6NL.png" />
+    <Resource Include="Images\M7NL.png" />
+    <Resource Include="Images\M8.png" />
+    <Resource Include="Images\M9.png" />
+    <Resource Include="Images\maavrij.png" />
+    <Resource Include="Images\ZC21.png" />
+    <Resource Include="Images\ZC21FIN.png" />
+    <Resource Include="Images\ZC35.png" />
+    <Resource Include="Images\ZC35FIN.png" />
+    <Resource Include="Images\ZC43.png" />
+    <Resource Include="Images\ZC43b.png" />
+    <Resource Include="Images\ZE9AGS.png" />
+    <Resource Include="Images\ZE9AGSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="A_logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
