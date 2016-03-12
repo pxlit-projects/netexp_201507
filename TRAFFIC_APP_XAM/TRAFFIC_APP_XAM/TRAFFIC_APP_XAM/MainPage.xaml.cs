@@ -58,7 +58,7 @@ namespace TRAFFIC_APP_XAM
         }
 
         //handle double click filter
-        private void BindingContextChanged()
+        private void Pick()
         {
             if (filter_picker.SelectedIndex == -1) 
             {
@@ -66,8 +66,17 @@ namespace TRAFFIC_APP_XAM
             }
             else
             {
-                List<Verkeersbord> filteredList = verkeersborden.FindAll(delegate(Verkeersbord obj) { return obj.type == filter_picker.Items[filter_picker.SelectedIndex]; });
-                AllSigns.ItemsSource = filteredList;
+                if (filter_picker.SelectedIndex == 0)
+                {
+                    List<Verkeersbord> filteredList = verkeersborden.FindAll(delegate(Verkeersbord obj) { return obj.type == FilterBox.Text; });
+                    AllSigns.ItemsSource = filteredList;
+                }
+                else
+                {
+                    List<Verkeersbord> filteredList = verkeersborden.FindAll(delegate(Verkeersbord obj) { return obj.vorm == FilterBox.Text; });
+                    AllSigns.ItemsSource = filteredList;
+                }
+
             }
 
         }

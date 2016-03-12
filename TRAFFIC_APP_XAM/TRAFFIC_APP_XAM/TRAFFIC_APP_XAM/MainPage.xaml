@@ -16,7 +16,7 @@
 
                 <RadioButton x:Name="VormCheck" Content="Vorm"/>
               </RadioGroup>-->
-              <Picker x:Name="filter_picker" SelectedIndexChanged="BindingContextChanged"></Picker>
+              <Picker x:Name="filter_picker" SelectedIndexChanged="Pick"></Picker>
             </StackLayout>
           </GroupBox>
         </StackLayout>
