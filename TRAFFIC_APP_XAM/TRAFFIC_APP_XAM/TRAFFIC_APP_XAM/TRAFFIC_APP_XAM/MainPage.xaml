@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TRAFFIC_APP_XAM.MainPage">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Grid>
+    <StackLayout>
+      <StackLayout Orientation="Horizontal" Height="70">
+        <StackLayout Orientation="Vertical">
+          <GroupBox Header="Filter op" Margin="10,10,10,10">
+            <StackLayout>
+              <RadioGroup>
+                <!--<RadioButton x:Name="TypeCheck" Text="Type" IsChecked="True"/>-->
+                <RadioButton x:id="TypeCheck" x:layout_width="wrap_content" x:layout_height="wrap_content" x:text="Type" />
+                <RadioButton x:id="VormCheck" x:layout_width="wrap_content" x:layout_height="wrap_content" x:text="Vorm" />
+
+                <!--<RadioButton x:Name="VormCheck" Content="Vorm"/>-->
+              </RadioGroup>
+            </StackLayout>
+          </GroupBox>
+        </StackLayout>
+        <StackLayout Orientation="Vertical">
+          <Button Width="380" Height ="25" Margin="10,10,10,10" Clicked="Button_MouseDoubleClick">
+            FILTER
+          </Button>
+          <Entry x:Name="FilterBox" Width="380" Height="25"></Entry>
+        </StackLayout>
+      </StackLayout>
+        <StackLayout>
+        <ListView x:Name="AllSigns" Height="350" Width="400" Margin="10">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                  <Grid>
+                    <Grid.RowDefinitions>
+                      <RowDefinition/>
+                      <RowDefinition/>
+                      <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition />
+                      <ColumnDefinition />
+                      <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding type, Converter={StaticResource localImageConverter}}" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0"  MaxHeight="50" MaxWidth="50" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="EIGENSCHAP"/>
+                    <Label Grid.Row="0" Grid.Column="2" Text="WAARDE"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="id"/>
+                    <Label Grid.Row="1" Grid.Column="2" Text="{Binding Path=id}"/>
+                    <Label Grid.Row="2" Grid.Column="1" Text="type"/>
+                    <Label Grid.Row="2" Grid.Column="2" Text="{Binding Path=type}"/>
+                  </Grid>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </StackLayout>
+        <StackLayout  Orientation="Vertical" Height="60">
+        <Button Width="450" Height ="40" Margin="10,10,10,10" HorizontalAlignment="Center" MouseDoubleClick="Button_MouseEnter">
+          Voeg Verkeersbord Toe
+        </Button>
+      </StackLayout>
+    </StackLayout>
+  </Grid>
+</ContentPage>

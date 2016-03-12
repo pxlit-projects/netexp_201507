@@ -65,7 +65,7 @@ namespace TRAFFIC_APP
         //handle double click filter
         private void Button_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if ( FilterBox.Text != null ) 
+            if ( FilterBox.Text != "" ) 
             {
                 string searchString = FilterBox.Text;
                 if (TypeCheck.IsChecked == true)

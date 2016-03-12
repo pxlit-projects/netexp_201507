@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A06471F-D76B-428B-9C66-511683571529}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TRAFFIC_APP_XAM.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>TRAFFIC_APP_XAMiOS</AssemblyName>
+    <NuGetPackageImportStamp>f0742ddc</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="app.config" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork@2x" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.csproj">
+      <Name>TRAFFIC_APP_XAM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-60%403x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40%403x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-Small%403x.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.IO">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+win8\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.22.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.22\lib\portable-net45+win8\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.22.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.22\lib\portable-net45+win8\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+win8\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+win8\System.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.1.0.6526\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.1.0.6526\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.1.0.6526\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.1.0.6526\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZE9AGSE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\7A19H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A_logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A1A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A1B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A1C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A1D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A7A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A7B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A7C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\A51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B15A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\B23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\betalend.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\betalend2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\bewoners.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C24A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C24B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C24C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C31LEFT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C31RIGHT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C47n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\C49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\D1A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\D1E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\D3B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\D4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\D5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\D7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\D9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\D10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\D11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\D13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\DISK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E9A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E9B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E9C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E9D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E9E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E9F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E9G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E9H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E9I.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\E19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\elec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\elec_auto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\f1a_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\f1a_V.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\f1b_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\f1b_V.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F1-oud.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\f3a_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\f3a_V.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\f3b_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\f3b_V.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F4A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F4B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F12A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F12B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F23A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F23B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F23C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F23D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F33A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F33AS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F33AS2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F33AS3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F33AS4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F33AS5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F33B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F33C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34AS36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34B1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34B2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34C1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F34C2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F35AS30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F35S31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F35S32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F35S33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F35S34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F35S351.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F45b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F50BIS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F51A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F51B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F52-bis-L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F52-bis-R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F52L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F52R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F53.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F57.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F59.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F62.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F63a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F63b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F63c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F63d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F63e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F63f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F65.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F67.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F69.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F73.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F77.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F79.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F83.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F85.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F87.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F89.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F93.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F95.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F97G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F98.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F98-additionnel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F99A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F99B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F99C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F101A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F101B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F101C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F103N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F105N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F107.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F109.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F117.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\F118.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\filter-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\FLE-A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\FLE-B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\FLE-C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\FLE-D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\GIa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\images.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\M1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\M2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\M3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\M4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\M5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\M6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\M7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\M8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\M9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\M10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\maavrij.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZC21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZC21FIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZC35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZC35FIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZC43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZC43b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ZE9AGS.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.1.0.6526\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.1.0.6526\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.1.0.6526\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.1.0.6526\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>

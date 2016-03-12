@@ -5,9 +5,6 @@
         Icon="./Images/A_logo.ico">
     <Grid>
         <StackPanel>
-            <StackPanel>
-                <Label Height="30" HorizontalAlignment="Center" Margin="10,10,10,10">TRAFFIC APP</Label>
-            </StackPanel>
             <StackPanel Orientation="Horizontal" Height="70">
                 <StackPanel Orientation="Vertical">
                     <GroupBox Header="Filter op" Margin="10,10,10,10">
@@ -45,7 +42,7 @@
                                         <ColumnDefinition />
                                         <ColumnDefinition />
                                     </Grid.ColumnDefinitions>
-                                    <Image Source="{Binding type, Converter={StaticResource localImageConverter}}" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0"  MaxHeight="150" MaxWidth="150" />
+                                    <Image Source="{Binding type, Converter={StaticResource localImageConverter}}" Grid.RowSpan="3" Grid.Row="0" Grid.Column="0"  MaxHeight="50" MaxWidth="50" />
                                     <TextBlock Grid.Row="0" Grid.Column="1" Text="EIGENSCHAP"/>
                                     <TextBlock Grid.Row="0" Grid.Column="2" Text="WAARDE"/>
                                     <TextBlock Grid.Row="1" Grid.Column="1" Text="id"/>
