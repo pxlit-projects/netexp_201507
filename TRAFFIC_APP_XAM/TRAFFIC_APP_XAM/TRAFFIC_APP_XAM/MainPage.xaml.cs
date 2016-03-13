@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Net;
 using System.IO;
+using System.Net.Http;
 
 namespace TRAFFIC_APP_XAM
 {
     public partial class MainPage : ContentPage
     {
-
         private string base_URL = "http://antwerpseverkeersborden.azurewebsites.net/api/verkeersbords/";
         public List<Verkeersbord> verkeersborden;
 
@@ -25,22 +25,19 @@ namespace TRAFFIC_APP_XAM
             {
                 verkeersborden = LoadSigns();
             }
-
             this.BindingContext = verkeersborden;
-
             InitializeComponent();
-
             AllSigns.ItemsSource = verkeersborden;
         }
 
         private List<Verkeersbord> LoadSigns()
         {
-            using (var webClient = new System.Net.WebClient())
-            {
-                var json = webClient.DownloadString(base_URL);
-                List<Verkeersbord> verkeersborden = JsonConvert.DeserializeObject<List<Verkeersbord>>(json);
-                return verkeersborden;
-            }
+            var client = new HttpClient();
+            var response = Task.Run(() => client.GetAsync(base_URL)).Result;
+            response.EnsureSuccessStatusCode();
+            var result = Task.Run(() => response.Content.ReadAsStringAsync()).Result;
+            List<Verkeersbord> verkeersborden = JsonConvert.DeserializeObject<List<Verkeersbord>>(result);
+            return verkeersborden;
         }
 
         private void AllSigns_MouseDoubleClick()

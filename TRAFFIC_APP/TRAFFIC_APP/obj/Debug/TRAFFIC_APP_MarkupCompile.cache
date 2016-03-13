@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\obj\Debug\
+D:\Git_hub_rep\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\obj\Debug\
 TRAFFIC_APP
 none
 false
-DEBUG;TRACE
-D:\Git_hub_rep\netexp_201507\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\App.xaml
+CODE_ANALYSIS;DEBUG;TRACE
+D:\Git_hub_rep\netexp_201507\TRAFFIC_APP\TRAFFIC_APP\App.xaml
 3-1816153979
 
 8-1638609345
-14868172927
+142032123894
 AddWindow.xaml;DetailWindow.xaml;MainWindow.xaml;
 
 False

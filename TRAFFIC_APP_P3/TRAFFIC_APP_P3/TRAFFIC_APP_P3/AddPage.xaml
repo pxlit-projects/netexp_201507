@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TRAFFIC_APP_P3.AddPage">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <ContentPage.Content>
+    <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+    <StackLayout>
+      <Grid x:Name="AddGrid">
+        <Grid.RowDefinitions>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="100" />
+          <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Text="EIGENSCHAP"/>
+        <Label Grid.Row="0" Grid.Column="1" Text="WAARDE"/>
+        <Label Grid.Row="1" Grid.Column="0" Text="Id"/>
+        <TextBox   Grid.Row="1" Grid.Column="1" Text="{Binding Path=id}"/>
+        <Label Grid.Row="2" Grid.Column="0" Text="Object Id"/>
+        <Entry   Grid.Row="2" Grid.Column="1" Text="{Binding Path=objectid}"/>
+        <Label Grid.Row="3" Grid.Column="0" Text="afmeting 1"/>
+        <Entry   Grid.Row="3" Grid.Column="1" Text="{Binding Path=afmeting1}"/>
+        <Label Grid.Row="4" Grid.Column="0" Text="afmeting 2"/>
+        <Entry   Grid.Row="4" Grid.Column="1" Text="{Binding Path=afmeting2}"/>
+        <Label Grid.Row="5" Grid.Column="0" Text="beeldvlak"/>
+        <Entry   Grid.Row="5" Grid.Column="1" Text="{Binding Path=beeldvlak}"/>
+        <Label Grid.Row="6" Grid.Column="0" Text="Fabricage datum"/>
+        <Entry   Grid.Row="6" Grid.Column="1" Text="{Binding Path=fabdatum}"/>
+        <Label Grid.Row="7" Grid.Column="0" Text="Fabricage Type"/>
+        <Entry   Grid.Row="7" Grid.Column="1" Text="{Binding Path=fabtype}"/>
+        <Label Grid.Row="8" Grid.Column="0" Text="Ophanging"/>
+        <Entry  Grid.Row="8" Grid.Column="1" Text="{Binding Path=ophanging}"/>
+        <Label Grid.Row="9" Grid.Column="0" Text="opschrift"/>
+        <TextBox   Grid.Row="9" Grid.Column="1" Text="{Binding Path=opschrift}"/>
+        <Label Grid.Row="10" Grid.Column="0" Text="Lengtegraad"/>
+        <Entry  Grid.Row="10" Grid.Column="1" Text="{Binding Path=point_lng}"/>
+        <Label Grid.Row="11" Grid.Column="0" Text="Breedtegraad"/>
+        <Entry   Grid.Row="11" Grid.Column="1" Text="{Binding Path=point_lat}"/>
+        <Label Grid.Row="12" Grid.Column="0" Text="Shape"/>
+        <Entry   Grid.Row="12" Grid.Column="1" Text="{Binding Path=shape}"/>
+        <Label Grid.Row="13" Grid.Column="0" Text="Subkey" />
+        <Entry   Grid.Row="13" Grid.Column="1" Text="{Binding Path=subkey}"/>
+        <Label Grid.Row="14" Grid.Column="0" Text="type" />
+        <Entry   Grid.Row="14" Grid.Column="1" Text="{Binding Path=type}"/>
+        <Label Grid.Row="15" Grid.Column="0" Text="vorm" />
+        <Entry   Grid.Row="15" Grid.Column="1" Text="{Binding Path=vorm}"/>
+        <Label Grid.Row="16" Grid.Column="0" Text="Vrije hoogte:" />
+        <Entry   Grid.Row="16" Grid.Column="1" Text="{Binding Path=vrije_hoogte}"/>
+        <Label Grid.Row="17" Grid.Column="0" Text="x" />
+        <Entry   Grid.Row="17" Grid.Column="1" Text="{Binding Path=x}"/>
+        <Label Grid.Row="18" Grid.Column="0" Text="xkey" />
+        <Entry   Grid.Row="18" Grid.Column="1" Text="{Binding Path=xkey}"/>
+        <Label Grid.Row="19" Grid.Column="0" Text="y" />
+        <Entry  Grid.Row="19" Grid.Column="1" Text="{Binding Path=y}"/>
+      </Grid>
+      <Button Width="270" Height ="40" Margin="10,10,10,10" HorizontalAlignment="Center" Clicked="Button_MouseDoubleClick_1">
+        Add Traffic Sign
+      </Button>
+    </StackLayout>    
+  </ContentPage.Content>
+</ContentPage>

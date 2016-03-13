@@ -73,7 +73,7 @@
       <Label Grid.Row="19" Grid.Column="0" Text="y" />
       <Entry  Grid.Row="19" Grid.Column="1" Text="{Binding Path=y}"/>
     </Grid>
-    <Button Width="270" Height ="40" Margin="10,10,10,10" HorizontalAlignment="Center" MouseDoubleClick="Button_MouseDoubleClick_1">
+    <Button Width="270" Height ="40" Margin="10,10,10,10" HorizontalAlignment="Center" Clicked="Button_MouseDoubleClick_1">
       Add Traffic Sign
     </Button>
   </StackLayout>

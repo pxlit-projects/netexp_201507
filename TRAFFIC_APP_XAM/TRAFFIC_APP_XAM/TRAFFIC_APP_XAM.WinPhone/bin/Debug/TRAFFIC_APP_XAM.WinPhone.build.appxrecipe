@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>LUKASLAPTOP</Machine>
+    <WindowsUser>Lukas</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>e8ebdf4c-1a3c-4b54-919a-429e98e93142</PackageIdentityName>
+    <IntermediateOutputPath>D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\bin\Debug\TRAFFIC_APP_XAM.WinPhone.exe">
+      <PackagePath>TRAFFIC_APP_XAM.WinPhone.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\bin\Debug\TRAFFIC_APP_XAM.WinPhone.exe.config">
+      <PackagePath>TRAFFIC_APP_XAM.WinPhone.exe.config</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Microsoft.Net.Http.2.2.29\lib\wpa81\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\portable-wp8+netcore45+net45+wp81+wpa81\System.Net.Http.Formatting.dll">
+      <PackagePath>System.Net.Http.Formatting.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Microsoft.Net.Http.2.2.29\lib\wpa81\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\bin\Debug\TRAFFIC_APP_XAM.dll">
+      <PackagePath>TRAFFIC_APP_XAM.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Core.dll">
+      <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Platform.dll">
+      <PackagePath>Xamarin.Forms.Platform.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Platform.WinRT.dll">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone.dll">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Phone.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Xaml.dll">
+      <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\bin\Debug\Business_objects.dll">
+      <PackagePath>Business_objects.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\bin\Debug\TRAFFIC_APP_XAM.WinPhone.xr.xml">
+      <PackagePath>TRAFFIC_APP_XAM.WinPhone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Platform.WinRT\PageControl.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT\PageControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Platform.WinRT\StepperControl.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT\StepperControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Platform.WinRT\Xamarin.Forms.Platform.WinRT.xr.xml">
+      <PackagePath>Xamarin.Forms.Platform.WinRT\Xamarin.Forms.Platform.WinRT.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone\FormsTextBoxStyle.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Phone\FormsTextBoxStyle.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone\PhoneResources.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Phone\PhoneResources.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone\Resources.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Phone\Resources.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone\SearchBox.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Phone\SearchBox.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\packages\Xamarin.Forms.2.1.0.6526\lib\wpa81\Xamarin.Forms.Platform.WinRT.Phone\Xamarin.Forms.Platform.WinRT.Phone.xr.xml">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Phone\Xamarin.Forms.Platform.WinRT.Phone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Git_hub_rep\netexp_201507\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM\TRAFFIC_APP_XAM.WinPhone\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

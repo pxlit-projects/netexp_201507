@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.IO;
+using System.Net.Http;
 
 
 namespace TRAFFIC_APP_XAM
@@ -26,13 +27,22 @@ namespace TRAFFIC_APP_XAM
 
         private Verkeersbord GetSignleSign(int id)
         {
-            string complete_URL = base_URL + id;
+            /*string complete_URL = base_URL + id;
             using (var webClient = new WebClient())
             {
                 var json = webClient.DownloadString(complete_URL);
                 Verkeersbord verkeersbord = JsonConvert.DeserializeObject<Verkeersbord>(json);
                 return verkeersbord;
-            }
+            }*/
+            var client = new HttpClient();
+            var response = Task.Run(() => client.GetAsync(base_URL)).Result;
+            response.EnsureSuccessStatusCode();
+            var result = Task.Run(() => response.Content.ReadAsStringAsync()).Result;
+            Verkeersbord verkeersbord = JsonConvert.DeserializeObject<Verkeersbord>(result);
+            //var movie = JsonConvert.DeserializeObject<SWMovie>(result);
+            //return movie;
+            return verkeersbord;
+
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

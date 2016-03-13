@@ -2,36 +2,30 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TRAFFIC_APP_XAM.MainPage">
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
-  <Grid>
-    <StackLayout>
-      <StackLayout Orientation="Horizontal" Height="70">
-        <StackLayout Orientation="Vertical">
-          <GroupBox Header="Filter op" Margin="10,10,10,10">
-            <StackLayout>
-              <!--<RadioGroup>
-                <RadioButton x:Name="TypeCheck" Text="Type" IsChecked="True"/>
-                <RadioButton x:Name="TypeCheck" x:layout_width="wrap_content" x:layout_height="wrap_content" x:text="Type" Ischecked="true"/>
-                <RadioButton x:Name="VormCheck" x:layout_width="wrap_content" x:layout_height="wrap_content" x:text="Vorm" />
-
-                <RadioButton x:Name="VormCheck" Content="Vorm"/>
-              </RadioGroup>-->
-              <Picker x:Name="filter_picker" SelectedIndexChanged="Pick"></Picker>
-            </StackLayout>
-          </GroupBox>
+  <ContentPage.Content>
+    <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Grid>
+      <StackLayout>
+        <StackLayout Orientation="Horizontal" Height="70">
+          <StackLayout Orientation="Vertical">
+            <GroupBox Header="Filter op" Margin="10,10,10,10">
+              <StackLayout>
+                <Picker x:Name="filter_picker" SelectedIndexChanged="Pick"></Picker>
+              </StackLayout>
+            </GroupBox>
+          </StackLayout>
+          <StackLayout Orientation="Vertical">
+            <Button Width="380" Height ="25" Margin="10,10,10,10" Clicked="Button_MouseDoubleClick">
+              FILTER
+            </Button>
+            <Entry x:Name="FilterBox" Width="380" Height="25"></Entry>
+          </StackLayout>
         </StackLayout>
-        <StackLayout Orientation="Vertical">
-          <Button Width="380" Height ="25" Margin="10,10,10,10" Clicked="Button_MouseDoubleClick">
-            FILTER
-          </Button>
-          <Entry x:Name="FilterBox" Width="380" Height="25"></Entry>
-        </StackLayout>
-      </StackLayout>
         <StackLayout>
-        <ListView x:Name="AllSigns" Height="350" Width="400" Margin="10">
-          <ListView.ItemTemplate>
-            <DataTemplate>
-              <ViewCell>
+          <ListView x:Name="AllSigns" Height="350" Width="400" Margin="10">
+            <ListView.ItemTemplate>
+              <DataTemplate>
+                <ViewCell>
                   <Grid>
                     <Grid.RowDefinitions>
                       <RowDefinition/>
@@ -51,16 +45,17 @@
                     <Label Grid.Row="2" Grid.Column="1" Text="type"/>
                     <Label Grid.Row="2" Grid.Column="2" Text="{Binding type}"/>
                   </Grid>
-              </ViewCell>
-            </DataTemplate>
-          </ListView.ItemTemplate>
-        </ListView>
-      </StackLayout>
+                </ViewCell>
+              </DataTemplate>
+            </ListView.ItemTemplate>
+          </ListView>
+        </StackLayout>
         <StackLayout  Orientation="Vertical" Height="60">
-        <Button Width="450" Height ="40" Margin="10,10,10,10" HorizontalAlignment="Center" MouseDoubleClick="Button_MouseEnter">
-          Voeg Verkeersbord Toe
-        </Button>
+          <Button Width="450" Height ="40" Margin="10,10,10,10" HorizontalAlignment="Center" MouseDoubleClick="Button_MouseEnter">
+            Voeg Verkeersbord Toe
+          </Button>
+        </StackLayout>
       </StackLayout>
-    </StackLayout>
-  </Grid>
+    </Grid>
+  </ContentPage.Content>
 </ContentPage>
